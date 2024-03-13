@@ -3,3 +3,18 @@ packages:
    haskus-system-build/
    haskus-system-tools/
    haskus-system-examples/
+   haskus-packages/haskus-utils-compat/*.cabal
+   haskus-packages/haskus-utils/*.cabal
+   haskus-packages/haskus-utils-types/*.cabal
+   haskus-packages/haskus-utils-data/*.cabal
+   haskus-packages/haskus-utils-variant/*.cabal
+   haskus-packages/haskus-binary/*.cabal
+   haskus-packages/haskus-web/*.cabal
+   haskus-packages/haskus-text/*.cabal
+   haskus-packages/haskus-locale/*.cabal
+   haskus-packages/haskus-calculus/*.cabal
+   haskus-packages/haskus-graphics/*.cabal
+   haskus-packages/haskus-ui/*.cabal
+   haskus-packages/haskus-time/*.cabal
+   haskus-packages/haskus-maths/*.cabal
+   haskus-packages/haskus-maps/*.cabal
