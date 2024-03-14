@@ -2,19 +2,101 @@ packages:
    haskus-system/
    haskus-system-build/
    haskus-system-tools/
-   haskus-system-examples/
-   haskus-packages/haskus-utils-compat/*.cabal
-   haskus-packages/haskus-utils/*.cabal
-   haskus-packages/haskus-utils-types/*.cabal
-   haskus-packages/haskus-utils-data/*.cabal
-   haskus-packages/haskus-utils-variant/*.cabal
-   haskus-packages/haskus-binary/*.cabal
-   haskus-packages/haskus-web/*.cabal
-   haskus-packages/haskus-text/*.cabal
-   haskus-packages/haskus-locale/*.cabal
-   haskus-packages/haskus-calculus/*.cabal
-   haskus-packages/haskus-graphics/*.cabal
-   haskus-packages/haskus-ui/*.cabal
-   haskus-packages/haskus-time/*.cabal
-   haskus-packages/haskus-maths/*.cabal
-   haskus-packages/haskus-maps/*.cabal
+
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+--   subdir:    haskus-system-examples/
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+  subdir:    haskus-utils-compat/
+  --sha256: sha256-Ji7f5YRFJJTw7dw1Szo0F23bUHNlV1Bpt4eI23Ssjpk=
+
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-utils/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-utils-types/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-utils-data/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-utils-variant/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  tag: 7221696fb3414a3e6f377b08aeb020dc0c3220d3
+  subdir: haskus-binary
+  --sha256: sha256-9aSkT6l68JI/tmUgm4x2NuAcvjHC3mZngfHp8XlP9uc=
+  
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-web/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-text/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-locale/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-calculus/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-graphics/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-ui/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-time/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-maths/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+           
+-- source-repository-package
+--   type: git
+--   location: https://github.com/pillowtrucker/haskus-packages
+--   subdir:    haskus-maps/
+--   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
