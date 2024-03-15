@@ -12,9 +12,9 @@ packages:
 source-repository-package
   type: git
   location: https://github.com/pillowtrucker/haskus-packages
-  tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+  tag: 4d9ae32c6869b12670c2ae09d03ceae074f10232
   subdir:    haskus-utils-compat/
-  --sha256: sha256-Ji7f5YRFJJTw7dw1Szo0F23bUHNlV1Bpt4eI23Ssjpk=
+  --sha256: sha256-VPb5i7skNuwxgn9hNgh3Dyao1TefET85Z0yOqFJd4kQ=
 
 -- source-repository-package
 --   type: git
@@ -43,9 +43,9 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/pillowtrucker/haskus-packages
-  tag: 7221696fb3414a3e6f377b08aeb020dc0c3220d3
+  tag: 4d9ae32c6869b12670c2ae09d03ceae074f10232
   subdir: haskus-binary
-  --sha256: sha256-9aSkT6l68JI/tmUgm4x2NuAcvjHC3mZngfHp8XlP9uc=
+  --sha256: sha256-VPb5i7skNuwxgn9hNgh3Dyao1TefET85Z0yOqFJd4kQ=
   
 -- source-repository-package
 --   type: git
