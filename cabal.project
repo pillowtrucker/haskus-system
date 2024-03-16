@@ -2,7 +2,8 @@ packages:
    haskus-system/
    haskus-system-build/
    haskus-system-tools/
-
+   my-system/
+   
 -- source-repository-package
 --   type: git
 --   location: https://github.com/pillowtrucker/haskus-packages

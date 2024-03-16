@@ -1,0 +1,4 @@
+* Run
+#+BEGIN_SRC zsh
+nix build .\#packages.x86_64-linux.x86_64-unknown-linux-musl:my-system:exe:my-system
+#+END_SRC

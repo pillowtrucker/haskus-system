@@ -29,6 +29,7 @@
         pkgs = import nixpkgs { inherit system overlays; inherit (haskellNix) config; };
         flake = pkgs.hixProject.flake {};
       in flake // {
+        #nativeBuildInputs = with pkgs; [gmp libffi glibc];
         legacyPackages = pkgs;
 
 #        packages.default = flake.packages."hello:exe:hello";
