@@ -13,7 +13,7 @@ import Language.Haskell.TH.Syntax
 import Text.Megaparsec
 import Text.Megaparsec.Char
 import Text.Megaparsec.Char.Lexer hiding (space)
-import Data.IntMap.Strict
+import Data.IntMap.Strict hiding (map)
 import Data.Void
 
 type Parser = Parsec Void String
@@ -63,8 +63,8 @@ parseLines = do
          devs  <- many device
          skipUseless
          return $ TupE
-            [ LitE $ IntegerL vid
-            , ConE (mkName "Vendor")
+            [ Just $ LitE $ IntegerL vid
+            , Just $ ConE (mkName "Vendor")
                `AppE` (LitE $ StringL $ vname)
                `AppE` (VarE (mkName "fromList")
                   `AppE` ListE devs)
@@ -77,12 +77,12 @@ parseLines = do
          someSpace
          dname <- anySingle `manyTill` end
          subs  <- many subdevice
-         return $ TupE
-            [ LitE $ IntegerL did
-            , ConE (mkName "Device")
-               `AppE` (LitE $ StringL $ dname)
-               `AppE` (VarE (mkName "fromList")
-                  `AppE` ListE subs)
+         return $ TupE $
+            map Just [ LitE $ IntegerL did
+                     , ConE (mkName "Device")
+                       `AppE` (LitE $ StringL $ dname)
+                       `AppE` (VarE (mkName "fromList")
+                               `AppE` ListE subs)
             ]
 
       subdevice = try $ do
@@ -94,10 +94,10 @@ parseLines = do
          did <- hexadecimal
          someSpace
          dname <- anySingle `manyTill` end
-         return $ TupE
-            [ LitE $ IntegerL $ (vid `shiftL` 16) .|. did
-            , LitE $ StringL $ dname
-            ]
+         return $ TupE $
+            map Just [ LitE $ IntegerL $ (vid `shiftL` 16) .|. did
+                     , LitE $ StringL $ dname
+                     ]
 
       classes = do
          vs <- many cls
@@ -112,13 +112,13 @@ parseLines = do
          cname <- anySingle `manyTill` end
          devs  <- many subclass
          skipUseless
-         return $ TupE
-            [ LitE $ IntegerL cid
-            , ConE (mkName "Class")
-               `AppE` (LitE $ StringL $ cname)
-               `AppE` (VarE (mkName "fromList")
-                  `AppE` ListE devs)
-            ]
+         return $ TupE $
+            map Just [ LitE $ IntegerL cid
+                     , ConE (mkName "Class")
+                       `AppE` (LitE $ StringL $ cname)
+                       `AppE` (VarE (mkName "fromList")
+                               `AppE` ListE devs)
+                     ]
       subclass = try $ do
          skipUseless
          void (char '\t')
@@ -126,13 +126,13 @@ parseLines = do
          someSpace
          cname <- anySingle `manyTill` end
          subs  <- many progInterface
-         return $ TupE
-            [ LitE $ IntegerL cid
-            , ConE (mkName "SubClass")
-               `AppE` (LitE $ StringL $ cname)
-               `AppE` (VarE (mkName "fromList")
-                  `AppE` ListE subs)
-            ]
+         return $ TupE $
+            map Just [ LitE $ IntegerL cid
+                     , ConE (mkName "SubClass")
+                       `AppE` (LitE $ StringL $ cname)
+                       `AppE` (VarE (mkName "fromList")
+                               `AppE` ListE subs)
+                     ]
 
       progInterface = try $ do
          skipUseless
@@ -141,10 +141,10 @@ parseLines = do
          cid <- hexadecimal
          someSpace
          cname <- anySingle `manyTill` end
-         return $ TupE
-            [ LitE $ IntegerL $ cid
-            , LitE $ StringL $ cname
-            ]
+         return $ TupE $
+            map Just [ LitE $ IntegerL $ cid
+                     , LitE $ StringL $ cname
+                     ]
 
       -- 'space' from MegaParsec also consider line-breaks as spaces...
       someSpace  = skipSome (char ' ')

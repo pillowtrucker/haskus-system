@@ -51,22 +51,22 @@ import Haskus.Utils.Types hiding (Union)
 -- Implementation using Haskell foreign primops
 --------------------------------------------------
 
-import GHC.Base (Word#)
+import GHC.Base (Word#, wordToWord32#, word32ToWord#)
 import GHC.Word
 
 foreign import prim "x86_64_cpuid_primop" cpuid# :: Word# -> (# Word#, Word#, Word#, Word# #)
 
 cpuid :: Word32 -> (Word32, Word32, Word32, Word32)
 cpuid (W32# n) = 
-   case (cpuid# n) of 
-      (# a,b,c,d #) -> ( W32# a, W32# b, W32# c, W32# d )
+   case (cpuid# (word32ToWord# n)) of 
+      (# a,b,c,d #) -> ( W32# (wordToWord32# a), W32# (wordToWord32# b), W32# (wordToWord32# c), W32# (wordToWord32# d) )
 
 foreign import prim "x86_64_cpuid2_primop" cpuid2# :: Word# -> Word# -> (# Word#, Word#, Word#, Word# #)
 
 cpuid2 :: Word32 -> Word32 -> (Word32, Word32, Word32, Word32)
 cpuid2 (W32# eax) (W32# ecx) = 
-   case (cpuid2# eax ecx) of 
-      (# a,b,c,d #) -> ( W32# a, W32# b, W32# c, W32# d )
+   case (cpuid2# (word32ToWord# eax) (word32ToWord# ecx)) of 
+      (# a,b,c,d #) -> ( W32# (wordToWord32# a), W32# (wordToWord32# b), W32# (wordToWord32# c), W32# (wordToWord32# d) )
 
 #else
 

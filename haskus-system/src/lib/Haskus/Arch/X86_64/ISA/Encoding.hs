@@ -97,7 +97,7 @@ import Haskus.Utils.List (nub)
 import Haskus.Utils.Solver
 import Haskus.Binary.Bits
 import Haskus.Number.Word
-import Haskus.Binary.BitField
+import Haskus.Binary.BitField hiding (Size)
 import Haskus.Arch.X86_64.ISA.MicroArch
 import Haskus.Arch.X86_64.ISA.Mode
 import Haskus.Arch.X86_64.ISA.Size
