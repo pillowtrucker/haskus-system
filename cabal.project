@@ -2,102 +2,110 @@ packages:
    haskus-system/
    haskus-system-build/
    haskus-system-tools/
+   haskus-system-examples/
    my-system/
-   
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
---   subdir:    haskus-system-examples/
 
 source-repository-package
   type: git
   location: https://github.com/pillowtrucker/haskus-packages
-  tag: 4d9ae32c6869b12670c2ae09d03ceae074f10232
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
   subdir:    haskus-utils-compat/
-  --sha256: sha256-VPb5i7skNuwxgn9hNgh3Dyao1TefET85Z0yOqFJd4kQ=
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=
 
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-utils/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-utils-types/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-utils-data/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-utils-variant/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
 source-repository-package
   type: git
   location: https://github.com/pillowtrucker/haskus-packages
-  tag: 4d9ae32c6869b12670c2ae09d03ceae074f10232
+  subdir:    haskus-utils/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=           
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-utils-types/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=           
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-utils-data/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=           
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-utils-variant/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=           
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
   subdir: haskus-binary
-  --sha256: sha256-VPb5i7skNuwxgn9hNgh3Dyao1TefET85Z0yOqFJd4kQ=
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=
   
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-web/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-text/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-locale/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-calculus/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-graphics/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-ui/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-time/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-maths/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
-           
--- source-repository-package
---   type: git
---   location: https://github.com/pillowtrucker/haskus-packages
---   subdir:    haskus-maps/
---   tag: 89f28f93355cd3aa0503b9b5cce9718199611ad8
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-web/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=           
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-text/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=           
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-locale/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=           
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-calculus/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=           
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-graphics/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=           
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-ui/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=
+  
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-time/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=         
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-maths/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=           
+
+source-repository-package
+  type: git
+  location: https://github.com/pillowtrucker/haskus-packages
+  subdir:    haskus-maps/
+  tag: 8896f07b1c5459b6a22594ab77b44a17760153a1
+  --sha256: sha256-W/bsBkuxpfsVP/Q4vCY164QuJo+73LTg0+du7ezlut0=
